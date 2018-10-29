@@ -1,4 +1,4 @@
-const dbUri = 'mongod://localhose/Ahoy';
+const dbUri = 'mongodb://localhost/Ahoy';
 const port = 4000;
 
 module.exports = {
