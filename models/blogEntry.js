@@ -7,6 +7,6 @@ const blogEntrySchema = mongoose.Schema({
   image: [String]
 });
 
-const blogEntryModel = mongoose('Entry', blogEntrySchema);
+const blogEntryModel = mongoose.model('Entry', blogEntrySchema);
 
 module.exports = blogEntryModel;

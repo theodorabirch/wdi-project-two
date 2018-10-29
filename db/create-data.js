@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const environment = require('./config/environment');
+const environment = require('../config/environment');
 mongoose.connect(environment.dbUri);
 
-const Entry = require('../models/blogentry');
+const Entry = require('../models/blogEntry');
 
 Entry.collection.drop();
 
@@ -30,6 +30,6 @@ const blogData = [
 
 Entry.create(blogData)
   .then(result => {
-    console.log(`Created ${result.length} cocktails!`);
+    console.log(`Created ${result.length} blogs!`);
     mongoose.connection.close();
   });

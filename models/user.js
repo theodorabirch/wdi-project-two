@@ -8,6 +8,6 @@ const userSchema = mongoose.Schema({
   loginDate: Date
 });
 
-const userModel = mongoose('User', userSchema);
+const userModel = mongoose.model('User', userSchema);
 
-module.exports = userModel; 
+module.exports = userModel;

@@ -7,7 +7,7 @@ app.use(express.static('public'));
 const environment = require('./config/environment');
 const port = environment.port;
 const router = require('./config/routes');
-// const auth = require('./lib/auth');
+const auth = require('./lib/auth');
 
 //set up EJS and tell express to use EJS when doing res.render
 const ejsLayouts = require('express-ejs-layouts');
@@ -27,14 +27,15 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 // express session
-app.use(session({ secret: 'shh...', resave: false, saveUninitialized: false }));
 const session = require('express-session');
+app.use(session({ secret: 'shh...', resave: false, saveUninitialized: false }));
 
-// app.use('*', auth.checkAuthStatus);
-// app.use('*', function(req, res, next) {
-//   console.log('Incoming request:', req.method, req.originalUrl);
-//   next();
-// });
+
+app.use('*', auth.checkAuthStatus);
+app.use('*', function(req, res, next) {
+  console.log('Incoming request:', req.method, req.originalUrl);
+  next();
+});
 app.use(router);
 
 // this has to always be at the bottom

@@ -7,7 +7,7 @@ function indexRoute(req, res) {
   Entry.find().then(function(result) {
     const blogEntryObject = {
       // need to ask why we put the result here.... what does this mean????
-      blogEntries: result
+      blogEntry: result
     };
     res.render('blogEntries/index', blogEntryObject);
   });
