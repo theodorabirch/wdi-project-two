@@ -1,0 +1,19 @@
+<form action="/posts/<%= _id %>?_method=PUT" method="post">
+  <div class="control">
+    <label for="name">Title</label>
+    <input name="name" value="<%= title %>" id="name" placeholder="e.g. Title of post ">
+  </div>
+  <div class="control">
+    <label for="name">Text</label>
+    <input name="name" value="<%= text %>" id="name" placeholder="e.g. post content ">
+  </div>
+  <div class="control">
+    <label for="name">Author</label>
+    <input name="name" value="<%= author %>" id="name" placeholder="e.g. authors name ">
+  </div>
+  <div class="control">
+    <label for="name">Image (URL)</label>
+    <input name="image" value="<%= image %>" id="name" placeholder="http://...">
+  </div>
+  <button>Update post</button>
+</form>
