@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ahoy</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  </head>
+  <body>
+    <% include ./partials/header %>
+    <div class="container">
+      <% include ./pages/home %>
+      <%- body %>
+    </div>
+    <% include ./partials/footer %>
+  </body>
+</html>

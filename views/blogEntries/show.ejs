@@ -1,0 +1,13 @@
+<main>
+  <h1><%= title %></h1>
+  <img class="show-image" src="<%= image %>"/>
+  <% image.forEach(image => { %>
+    <span class="tag1"><%= image %></span>
+    <% }) %>
+  <p> Authors:
+    <%= author.forEach(author => { %>
+      <span class="tag2"><%= author %></span>
+    <% }) %>
+  </p>
+  <p><%= text %></p>
+</main>

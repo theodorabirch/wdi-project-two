@@ -1,0 +1,14 @@
+<%# // need to discuss this section  %>
+<main>
+  <h1> Ahoy: A battle cry </h1>
+  <div class="blog-entry-grid">
+    <% blogEntries.forEach(entry => {%>
+      <div>
+      <a href="/blogentries/<%= blogEntry.id %>">
+      <img width="200px" height="200px" src="<%= blogEntry.image %>" />
+      <h3><%= blogEntry.name %></h3>
+      </a>
+      </div>
+      <% }) %>
+    </div>
+</main>
