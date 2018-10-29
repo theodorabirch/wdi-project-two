@@ -35,7 +35,7 @@ router.get('/blog', blogEntryController.indexRoute);
 // will load with id = 'new'
 router.get('/blog/new', secureRoute, blogEntryController.newRoute);
 
-// Listen for POST requests to /cocktails
+// Listen for POST requests to the blog
 router.post('/blog', secureRoute, blogEntryController.createRoute);
 
 // SHOW Route
