@@ -28,34 +28,34 @@ router.get('pages/contact', function (req, res){
 });
 
 // INDEX Route
-router.get('/entries', cocktailController.indexRoute);
+router.get('/blog', blogEntryController.indexRoute);
 
 // NEW Route: NOTE: This must appear
 // above the show route, otherwise the show route
 // will load with id = 'new'
-router.get('/cocktails/new', secureRoute, cocktailController.newRoute);
+router.get('/blog/new', secureRoute, blogEntryController.newRoute);
 
 // Listen for POST requests to /cocktails
-router.post('/cocktails', secureRoute, cocktailController.createRoute);
+router.post('/blog', secureRoute, blogEntryController.createRoute);
 
 // SHOW Route
-router.get('/cocktails/:id', cocktailController.showRoute);
+router.get('/blog/:id', blogEntryController.showRoute);
 
 // UPDATE route
-router.put('/cocktails/:id', secureRoute, cocktailController.updateRoute);
+router.put('/blog/:id', secureRoute, blogEntryController.updateRoute);
 
 // EDIT route
-router.get('/cocktails/:id/edit', secureRoute, cocktailController.editRoute);
+router.get('/blog/:id/edit', secureRoute, blogEntryController.editRoute);
 
 // DELETE Route
-router.delete('/cocktails/:id', secureRoute, cocktailController.deleteRoute);
+router.delete('/blog/:id', secureRoute, blogEntryController.deleteRoute);
 
 // Rating CREATE route
-router.post('/cocktails/:cocktailId/ratings', secureRoute, ratingController.createRoute);
+router.post('/blog/:blogId/comments', secureRoute, commentController.createRoute);
 
 // Rating DELETE route
-router.delete('/cocktails/:cocktailId/ratings/:ratingId', secureRoute,
-  ratingController.deleteRoute);
+router.delete('/blog/:blogId/comments/:commentId', secureRoute,
+  commentController.deleteRoute);
 
 // have to export everything so that the files are linked.
 module.exports = router;
