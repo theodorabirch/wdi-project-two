@@ -12,6 +12,15 @@ function commentsCreateRoute(req, res) {
     });
 }
 
+function commentDeleteRoute(req, res) {
+  Post
+    .findById(req.params.postId)
+    .then(post => {
+      post.comments.id(req.params.commentId).remove();
+      post.save().then(() => res.redirect(`/posts/${post.id}`));
+    });
+}
 module.exports = {
-  commentsCreateRoute: commentsCreateRoute
+  commentsCreateRoute: commentsCreateRoute,
+  commentDeleteRoute: commentDeleteRoute
 };
