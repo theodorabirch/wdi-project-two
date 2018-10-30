@@ -22,6 +22,10 @@ router.get('/', function(req, res) {
 router.get('/about', function(req, res) {
   res.render('about');
 });
+// Load the contact page
+router.get('/contact', function(req, res) {
+  res.render('contact');
+});
 
 //Render the profile page
 router.get('profile/:id', secureRoute, userController.userShowRoutes);
