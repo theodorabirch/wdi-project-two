@@ -28,11 +28,10 @@ function createRoute(req, res) {
 }
 
 function showRoute(req, res) {
-  console.log('req.params is', req.params);
   // Get a post out of the database, using its ID
-  // Get a particular post then render an ejs file
+  console.log('req.params is', req.params);
   Post.findById(req.params.id).then(result => {
-    console.log('---------->', result);
+    // Get a particular post then render an ejs file
     res.render('posts/show', result);
   });
 }
@@ -43,16 +42,12 @@ function updateRoute(req, res) {
   console.log(`Updating post id ${req.params.id}`, req.body);
   // Let's update the database using the model and the new data:
   Post.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => {
-      // Redirect to the index (for now!)
-      res.redirect('/posts');
+    .then((result) => {
+      res.redirect(`/posts/${result._id}`);
     });
 }
 
 function editRoute(req, res, next) {
-  // First get the post from the database
-  // findById returns an object, so we can hand it straight
-  // into the EJS file.
   Post
     .findById(req.params.id)
     .then(result => {

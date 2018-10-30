@@ -1,6 +1,7 @@
 <main>
   <h1><%= title %></h1>
   <img class="show-image" src="<%= image %>"/>
+  <p><%= author %></p>
   <p><%= text %></p>
   <% if (locals.isLoggedIn) { %>
     <div class="buttons">
@@ -14,6 +15,9 @@
         <div>
           <span style="font-weight: bold;"><%= comment.username %></span>
           <span><%= comment.content %></span>
+            <form class="delete-comment-button" method="POST" action="/posts/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
+            <button class="delete-comment-button">Delete comment</button>
+          </form>
         </div>
       <% }) %>
     </div>

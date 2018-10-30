@@ -13,6 +13,8 @@ function commentsCreateRoute(req, res) {
 }
 
 function commentDeleteRoute(req, res) {
+  console.log('we are in delete route');
+  console.log(req.params.postId, req.params.commentId);
   Post
     .findById(req.params.postId)
     .then(post => {
