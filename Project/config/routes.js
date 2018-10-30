@@ -1,6 +1,7 @@
 const postController = require('../controllers/postController');
 const authController = require('../controllers/authController');
 const commentController = require('../controllers/commentController');
+const userController = require('../controllers/userController');
 const secureRoute = require('../lib/secureRoute');
 const router = require('express').Router();
 
@@ -22,6 +23,10 @@ router.get('/', function(req, res) {
 router.get('/about', function(req, res) {
   res.render('about');
 });
+
+//Render the profile page
+router.get('profile/:id', secureRoute, userController.userShowRoutes);
+// this is the file name with the function of userShow in it.
 
 // INDEX Route
 router.get('/posts', postController.indexRoute);

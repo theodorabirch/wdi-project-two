@@ -1,16 +1,21 @@
 const Post = require('../models/post');
 
-function indexRoute(req, res) {
+
+function indexRoute(req, res, next) {
   // Find all the posts, then render an ejs file:
   // Find returns an array
-  Post.find().then(function(result) {
-    const postObject = {
-      posts: result
-    };
-    res.render('posts/index', postObject);
-  });
-  // This is what we previously did:
-  // res.render('posts/index', postObject);
+  Post
+    .find()
+    .then(function(result) {
+      const postObject = {
+        posts: result
+      };
+      res.render('posts/index', postObject);
+    })
+    .catch(err => {
+      console.log('There was an error', err);
+      next();
+    });
 }
 
 function newRoute(req, res) {
@@ -44,15 +49,21 @@ function updateRoute(req, res) {
     });
 }
 
-function editRoute(req, res) {
+function editRoute(req, res, next) {
   // First get the post from the database
   // findById returns an object, so we can hand it straight
   // into the EJS file.
-  Post.findById(req.params.id)
+  Post
+    .findById(req.params.id)
     .then(result => {
       res.render('posts/edit', result);
+    })
+    .catch(err => {
+      console.log('There was an error', err);
+      next();
     });
 }
+
 
 function deleteRoute(req, res) {
   Post.findByIdAndDelete(req.params.id)

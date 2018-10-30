@@ -1,7 +1,7 @@
 const User = require('../models/user');
 
 
-function userShow(req, res, next) {
+function userShowRoutes(req, res, next) {
   // In this section I am finding the id of the user by using the model.
   User
     .findById(req.params.id)
@@ -20,5 +20,5 @@ function userShow(req, res, next) {
 }
 
 module.exports = {
-  userShow: userShow
+  userShowRoutes: userShowRoutes
 };
