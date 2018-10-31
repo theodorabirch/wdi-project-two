@@ -1,4 +1,5 @@
 function secureRoute(req, res, next) {
+  console.log('this is running');
   if (req.session.userId) {
     // User is logged in
     next();
