@@ -1,13 +1,12 @@
-<main>
-  <h1>All the posts</h1>
-  <div class="post-grid">
+<div class=" index-page-container">
+  <div class="columns is-multiline">
     <% posts.forEach(post => {%>
-      <div>
+      <div class="column is-4 index">
       <a href="/posts/<%= post.id %>">
-      <img width="200px" height="200px" src="<%= post.image %>" />
+      <img width="200px" height="200px" src="<%= post.image %>"/></a>
       <h3><%= post.title %></h3>
-      </a>
+      <p><%= post.shortSummary %></p>
       </div>
       <% }) %>
     </div>
-</main>
+  </div>

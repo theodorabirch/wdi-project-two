@@ -5,8 +5,9 @@ const postSchema = mongoose.Schema({
   title: String,
   text: String,
   author: [String],
+  shortSummary: String,
   image: [String],
-  // in this section I am embedded the comments into the postSchema. This means that the comments are related to the posts.
+  // in this section I have embedded the comments into the postSchema. This means that the comments are related to the posts.
   // I have also added an addedBy section which allows me to reference the post's user so that the comments and the user are connected.
   addedBy: { type: mongoose.Schema.ObjectId, ref: 'User'},
   comments: [{
