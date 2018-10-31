@@ -1,12 +1,24 @@
-<div class=" index-page-container">
-  <div class="columns is-multiline">
-    <% posts.forEach(post => {%>
-      <div class="column is-4 index">
-      <a href="/posts/<%= post.id %>">
-      <img width="200px" height="200px" src="<%= post.image %>"/></a>
-      <h3><%= post.title %></h3>
-      <p><%= post.shortSummary %></p>
-      </div>
-      <% }) %>
-    </div>
-  </div>
+<section class="container">
+    <div class="columns is-multiline is-features">
+      <% posts.forEach(post => {%>
+        <div class="column is-4">
+        <a href="/posts/<%= post.id %>">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+              <img src="<%= post.image %>"/>
+              </figure>
+            </div>
+            </div>
+            </a>
+            <div class="card-content">
+              <div class="content">
+                <h3><%= post.title %></h3>
+                  <p><%= post.shortSummary %></p>
+                <span class="button is-link modal-button" data-target="modal-image2">Go to post</span>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </section>

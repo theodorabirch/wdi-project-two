@@ -2,6 +2,7 @@ const User = require('../models/user');
 
 
 function userShowRoutes(req, res, next) {
+  console.log('this is working',  );
   // In this section I am finding the id of the user by using the model.
   User
     .findById(req.params.id)
@@ -19,6 +20,20 @@ function userShowRoutes(req, res, next) {
     });
 }
 
+//
+// function followProfileRoute(req, res, next) {
+//   User
+//     .findById(req.params.id)
+//     .populate('comments addedPosts')
+//     .then(user => {
+//       console.log(user.comments);
+//       res.render('profile', user);
+//     })
+//     .catch(err => {
+//       console.log('There was an error', err);
+//       next();
+//     });
+// }
 module.exports = {
   userShowRoutes: userShowRoutes
 };
