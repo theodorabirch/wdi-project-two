@@ -1,32 +1,56 @@
-<main>
-  <h1><%= title %></h1>
-  <img class="show-image" src="<%= image %>"/>
-  <p><%= author %></p>
-  <p><%= text %></p>
-  <% if (locals.isLoggedIn) { %>
-    <div class="buttons">
-    <form action="/posts/<%= _id %>?_method=DELETE" method="post">
-    <button class="button">Delete</button>
-    </form>
-    <a class="button" href="/posts/<%= _id %>/edit">Edit</a>
+<section class="hero is-info is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title"><%= title %></h1>
     </div>
-    <div>
-      <% comments.forEach(comment => { %>
-        <div>
-          <span style="font-weight: bold;"><%= comment.username %></span>
-          <span><%= comment.content %></span>
-            <form class="delete-comment-button" method="POST" action="/posts/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
-            <button class="delete-comment-button">Delete comment</button>
-          </form>
+  </div>
+</section>
+
+<div class="container">
+  <!-- START ARTICLE FEED -->
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <!-- START ARTICLE -->
+      <div class="card article">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <img class="show-image" src="<%= image %>"/>
+              <h1 class="title article-title">
+            </div>
+          </div>
+          <div class="content article-body">
+            <h3 class="has-text-centered"> <%= author %></h3>
+            <p><%= text %></p>
+            </div>
+            <% if (locals.isLoggedIn) { %>
+              <div class="buttons">
+              <form action="/posts/<%= _id %>?_method=DELETE" method="post">
+              <button class="button">Delete</button>
+              </form>
+              <a class="button" href="/posts/<%= _id %>/edit">Edit</a>
+              </div>
+              <div>
+              <% comments.forEach(comment => { %>
+                <div>
+                <span style="font-weight: bold;"><%= comment.username %></span>
+                <span><%= comment.content %></span>
+                <form class="delete-comment-button" method="POST" action="/posts/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
+                <button class="delete-comment-button">Delete comment</button>
+                </form>
+                </div>
+                <% }) %>
+                </div>
+                <div>
+                <form method="POST" action="/posts/<%= _id %>/comments">
+                <textarea name="content"></textarea>
+                <input name="username" type="hidden" value="<%= locals.currentUser.username %>"/>
+                <button>Comment on this post</button>
+                </form>
+                </div>
+                <% } %>
+              </div>
+            </div>
+          </div>
         </div>
-      <% }) %>
-    </div>
-    <div>
-      <form method="POST" action="/posts/<%= _id %>/comments">
-        <textarea name="content"></textarea>
-        <input name="username" type="hidden" value="<%= locals.currentUser.username %>"/>
-        <button>Comment on this post</button>
-      </form>
-    </div>
-  <% } %>
-</main>
+      </section>

@@ -1,33 +1,20 @@
-
-
-
-<div class="hero-body">
-  <div class="container has-text-centered">
-    <div class="columns is-vcentered">
-      <div class="column is-5">
-        <figure class="image is-4by3">
-          <img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1600_900/images/live/p0/1l/97/p01l97dr.jpg" alt="Description">
-        </figure>
-      </div>
-      <div class="column is-6 is-offset-1">
-                  <h1 class="title is-2">
-                      Pieces of History
-                  </h1>
-                  <h2 class="subtitle is-4">
-                      A Historical call to Battle
-                  </h2>
-                  <% if (locals.isLoggedIn) { %>
-                    <p>Welcome back <%= locals.currentUser.username %></p>
-                    <% } else { %>
-                      <p>You must be logged in to post</p>
-                      <% }%>
-                  <br>
-                  <p class="has-text-centered">
-                      <a class="button is-medium is-info is-outlined">
-          Learn more
-        </a>
-                  </p>
-              </div>
-          </div>
-      </div>
-  </div>
+<section class="home-page">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-6 is-offset-3">
+                <h1 class="title">
+                    Pieces of History
+                </h1>
+                <h2 class="subtitle">
+                  A Historical call to Battle
+                </h2>
+                <% if (locals.isLoggedIn) { %>
+                  <p>Welcome back <%= locals.currentUser.username %></p>
+                  <% } else { %>
+                    <p>You must be logged in to post</p>
+                    <% }%>
+                <button type="button" name="Enter the site" placeholder="Enter the site here"></button>
+            </div>
+        </div>
+    </div>
+</section>

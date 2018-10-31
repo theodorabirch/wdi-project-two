@@ -1,12 +1,42 @@
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+
 header ul {
   display: flex;
   justify-content: space-around;
+}
+
+section.home-page {
+  background-image: url("https://i-h2.pinimg.com/564x/70/1e/53/701e53c8262a1df5814b7c5f262e1513.jpg");
+  background-repeat: no-repeat;
 }
 
 header li {
   list-style: none;
 }
 
+h1 .title {
+  font-color: white;
+}
+.column {
+  margin-top: 20px;
+}
+
+div.card-content {
+  background-color: #e4e2df;
+}
+
+/* .Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+} */
 
 a {
   text-decoration: none;
