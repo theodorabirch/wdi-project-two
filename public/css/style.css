@@ -12,13 +12,21 @@ h1 {
 h2 {
   font-family: 'Cinzel', serif;
 }
+textarea #name.textarea {
+  font-family: 'Cinzel', serif;
+}
+
 p {
   font-family: 'Cinzel', serif;
   color: black;
   font-size: 15px;
 }
 .comment-box {
-  width: 100%; 
+  width: 100%;
+}
+
+.delete-comment-button {
+  margin-bottom: 8px;
 }
 div {
   font-family: 'Cinzel', serif;
@@ -33,8 +41,21 @@ header ul {
   display: flex;
   justify-content: space-around;
 }
-.button.is-link {
-  background-color: #e3dc96;
+.content  span.button.is-link {
+  background-color: white ;
+  color: black;
+  font-weight: bold;
+  border-radius: 0;
+}
+div.card-content {
+  min-height: 320px;
+}
+
+div.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 300px;
 }
 .logged-in {
   color: white;
@@ -127,11 +148,9 @@ a {
   color: grey;
 }
 
-
 body {
   font-family: Helvetica,sans-serif;
 }
-
 
 .post-grid {
   display: flex;
@@ -161,7 +180,49 @@ main {
   display: flex;
   justify-content: space-around;
 }
+.button.is-primary {
+  background-color: grey;
+  color: black;
+  font-weight: bold;
+}
+.button.is-fullwidth {
+  background-color: grey;
+  color: black;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
 
+ .buttons .button {
+   background-color: grey;
+   color: black;
+   font-weight: bold;
+   font-family: 'Cinzel', serif;
+ }
+ h3.title.is-2 {
+   text-align: center;
+ }
+ h4.subtitle.is-5 {
+   text-align: center;
+ }
+ .hero.is-small .hero-body {
+   background-color: white;
+   color: black;
+   font-weight: bold;
+ }
+.hero.is-info .title {
+  color: black;
+}
+.the-show-text {
+  margin-bottom: 75px;
+}
+.buttons:not(:last-child) {
+  margin-top: -44px;
+}
+.button.is-large {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}
 .button {
   height: 50px;
   background-color: steelblue;
