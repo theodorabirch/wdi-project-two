@@ -5,7 +5,26 @@ body {
 #home {
   padding-bottom: 28rem;
 }
-
+h1 {
+  font-family: 'Cinzel', serif;
+}
+h2 {
+  font-family: 'Cinzel', serif;
+}
+p {
+  font-family: 'Cinzel', serif;
+  color: black;
+  font-size: 15px;
+}
+div {
+  font-family: 'Cinzel', serif;
+}
+button {
+  font-family: 'Cinzel', serif;
+}
+input {
+  font-family: 'Cinzel', serif;
+}
 header ul {
   display: flex;
   justify-content: space-around;
@@ -23,9 +42,7 @@ header ul {
   font-family: 'Cinzel', serif;
   color: grey;
 }
-.articles {
-  font-family: 'Cinzel', serif;
-}
+
 #home-title {
   color: white;
   font-size: 60px;
