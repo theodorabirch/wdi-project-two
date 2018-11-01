@@ -8,36 +8,34 @@
   <link href="https://fonts.googleapis.com/css?family=Cinzel|Merriweather|Montserrat" rel="stylesheet">
   <link rel="shortcut icon" href="images/puzzle (1).png">
   <link rel="stylesheet" href="/css/style.css">
-  <body>
-    <header>
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
 
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="../">
-              </a>
-              <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-
-            <div class="navbar-end">
+          <div class="navbar-end">
             <div id="navbarMenu" class="navbar-menu">
-                <div class="tabs is-right">
-                  <ul class="navbar-menu">
-                    <li class="is-active"><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/posts/new"> New Post</a></li>
-                    <li><a href="/posts">Blog </a></li>
-                    <li><a href="/contact">Contact us</a></li>
-                    <% if (locals.isLoggedIn) { %>
-                      <li><a href="/logout">Log out <%= locals.currentUser.username %></a></li>
-                      <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                          Account
-                        </a>
+              <div class="tabs is-right">
+                <ul class="navbar-menu">
+                  <li class="is-active"><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/posts/new"> New Post</a></li>
+                  <li><a href="/posts">Blog </a></li>
+                  <li><a href="/contact">Contact us</a></li>
+                  <% if (locals.isLoggedIn) { %>
+                  <li><a href="/logout">Log out <%= locals.currentUser.username %></a></li>
+                  <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Account</a>
                         <div class="navbar-dropdown">
                           <a class="navbar-item">
                             Dashboard
@@ -55,21 +53,17 @@
                           <% } else { %>
                             <li><a href="/login">Log in</a></li>
                             <li><a href="/register">Sign up</a></li>
-                            <% } %>
-                          </ul>
+                          <% } %>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                </ul>
               </div>
-              </div>
-            </nav>
+            </div>
+          </div>
+      </nav>
+  </header>
 
+    <%- body %>
 
-              </header>
-
-
-                <%- body %>
-
-            </body>
-            </html>
+</body>
+</html>

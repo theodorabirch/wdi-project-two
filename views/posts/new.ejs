@@ -1,24 +1,40 @@
-<form action="/posts" method="post">
-  <div class="control">
-    <label for="name">Title</label>
-    <input name="title" id="name" placeholder="Title of the post">
-  </div>
-  <div class="control">
-    <label for="name"> Short Summary </label>
-    <input name="short-summary" id="name" placeholder="Short Summary">
-  </div>
-  <div class="control">
-    <label for="name">Text</label>
-    <input name="text" id="name" placeholder="Blog content">
-  </div>
-  <div class="control">
-    <label for="name">Author</label>
-    <input name="author" id="name" placeholder="Author's name">
-  </div>
-  <div class="control">
-    <label for="name">Image (URL)</label>
-    <input name="image" id="name" placeholder="http://...">
-  </div>
+<div class="container new-form centered">
 
-  <button class="button">Post to Pieces of History </button>
-</form>
+<div class="columns">
+  <div class="column is-10 is-offset-1">
+    <form class="new-form" action="/posts" method="post">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input name="title" id="name" placeholder="Title of the post">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Short Summary</label>
+        <div class="control">
+          <textarea name="short-summary" id="name" class="textarea" placeholder="Short Summary"></textarea>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Text</label>
+        <div class="control">
+          <textarea name="text" id="name" class="textarea" placeholder="Blog Content"></textarea>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Author</label>
+        <div class="control">
+          <input name="author" id="name" placeholder="Author's name">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Image (URL)</label>
+        <div class="control">
+          <input name="title" id="name" placeholder="http://...">
+        </div>
+      </div>
+      <button class="button">Post to Pieces of History </button>
+    </form>
+  </div>
+</div>
+</div>

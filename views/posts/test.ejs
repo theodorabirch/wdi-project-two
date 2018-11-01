@@ -30,3 +30,29 @@
     </div>
   <% } %>
 </main>
+
+
+<form action="/posts" method="post">
+  <div class="control">
+    <label for="name">Title</label>
+    <input name="title" id="name" placeholder="Title of the post">
+  </div>
+  <div class="control">
+    <label for="name"> Short Summary </label>
+    <input name="short-summary" id="name" placeholder="Short Summary">
+  </div>
+  <div class="control">
+    <label for="name">Text</label>
+    <input name="text" id="name" placeholder="Blog content">
+  </div>
+  <div class="control">
+    <label for="name">Author</label>
+    <input name="author" id="name" placeholder="Author's name">
+  </div>
+  <div class="control">
+    <label for="name">Image (URL)</label>
+    <input name="image" id="name" placeholder="http://...">
+  </div>
+
+  <button class="button">Post to Pieces of History </button>
+</form>

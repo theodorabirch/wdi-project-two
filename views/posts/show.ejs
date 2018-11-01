@@ -43,7 +43,7 @@
                 </div>
                 <div>
                 <form method="POST" action="/posts/<%= _id %>/comments">
-                <textarea name="content"></textarea>
+                <textarea class="comment-box" name="content"></textarea>
                 <input name="username" type="hidden" value="<%= locals.currentUser.username %>"/>
                 <button>Comment on this post</button>
                 </form>

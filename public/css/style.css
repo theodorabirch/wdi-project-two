@@ -1,5 +1,6 @@
 body {
     font-family: 'Cinzel', serif;
+    width: 100vw;
 }
 
 #home {
@@ -16,6 +17,9 @@ p {
   color: black;
   font-size: 15px;
 }
+.comment-box {
+  width: 100%; 
+}
 div {
   font-family: 'Cinzel', serif;
 }
@@ -28,6 +32,9 @@ input {
 header ul {
   display: flex;
   justify-content: space-around;
+}
+.button.is-link {
+  background-color: #e3dc96;
 }
 .logged-in {
   color: white;
