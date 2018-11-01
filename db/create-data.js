@@ -49,6 +49,27 @@ const postData = [
     author: ['Rafa Ruiz'],
     shortSummary: 'Battle for Britain: the ferocious battle in the far north against 10th-century Viking invaders.',
     image: ['https://i1.wp.com/www.military-history.org/wp-content/uploads/2012/07/battlemap.jpg?w=1000&ssl=1']
+  },
+  {
+    title: 'Pigeons at Passchendaele',
+    text: 'For Major Alec Waley, the commanding officer of the British Expeditionary Force’s Carrier Pigeon Service, 31 July 1917 was a peculiarly tense day, but ultimately a very satisfying one. It was the first day of the Third Battle of Ypres – or ‘Passchendaele’, as it is more often remembered. The conduct of this offensive was facilitated by the most destructive technologies yet devised: modern artillery, machine-guns, tanks, aircraft, flamethrowers, and poison gas. Total casualties, Allied and German, were probably in excess of 500,000. What place, in the midst of industrialised slaughter on this scale, could there be for Waley’s fragile little birds, carried ‘up the line’ in their delicate wicker baskets? By the evening of the first day, Waley had an answer: visiting the BEF’s II Corps, he was told that ‘75% of the news which had come in from the front-line had been received by pigeon’.',
+    author: ['Lucia Bianciotto'],
+    shortSummary: 'For Major Alec Waley, the commanding officer of the British Expeditionary Force’s Carrier Pigeon Service, 31 July 1917 was a peculiarly tense day, but ultimately a very satisfying one.',
+    image: ['https://i1.wp.com/www.military-history.org/wp-content/uploads/2018/01/Pigeons-in-Tanks-Corps-service.jpg?w=763&ssl=1']
+  },
+  {
+    title: 'Afghanistan: graveyard of armies',
+    text: 'Taken in historical context, the 13-year presence of NATO combat troops in Afghanistan amounted to scarcely a footnote to centuries of foreign military intervention in the country. From the Achaemenid imperial army in the 6th century BC to the combined might of 48 International Security Assistance Force (ISAF) nations that deployed in 2003, Afghanistan has endured more than two millennia of invasions of its territory. There is a common misconception that runs like this: Afghanistan is a country that cannot be conquered, and every foreign power that has attempted to hold it has come to grief. The first assertion is false, the second is true.',
+    author: ['David Comer'],
+    shortSummary: 'A huge, mountainous, landlocked Central Asian state, Afghanistan has defied invaders for 2,500 years. David Comer takes a look at the country’s military longue durée.',
+    image: ['https://i1.wp.com/www.military-history.org/wp-content/uploads/2018/04/0A-Lead-Option-2.jpg?w=700&ssl=1']
+  },
+  {
+    title: '5 Myths about the Wars of the Roses',
+    text: 'In a sense, the Wars of the Roses began with the usurpation of the throne by Henry Bolingbroke in 1399. Lancastrian legitimacy was always actively contested, except perhaps for a brief period during the reign of Henry V (1413-1422).',
+    author: ['Sham'],
+    shortSummary: 'We examine 5 myths surrounding the Wars of the Roses.',
+    image: ['https://i1.wp.com/www.military-history.org/wp-content/uploads/2014/10/WoR_UsurpationHenryBolingbroke_1399.jpg']
   }
 ];
 
