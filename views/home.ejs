@@ -1,20 +1,43 @@
-<section class="home-page">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <div class="column is-6 is-offset-3">
-                <h1 class="title">
+<section id="home" class="home-page">
+    <div id="text-body" class="hero-body">
+      <img id="boat-image" src="https://i.pinimg.com/originals/0d/6b/a5/0d6ba50820f157caca052d47691ca588.jpg" alt="The Battle of the Nile">
+        <div id="pieces-of-history" class="container has-text-centered">
+            <div id="text-background" class="column is-6 is-offset-3">
+                <h1 id="home-title"class="title">
                     Pieces of History
                 </h1>
-                <h2 class="subtitle">
+                <h2 id="home-subtitle" class="subtitle">
                   A Historical call to Battle
                 </h2>
                 <% if (locals.isLoggedIn) { %>
                   <p>Welcome back <%= locals.currentUser.username %></p>
                   <% } else { %>
-                    <p>You must be logged in to post</p>
+                    <p class ="logged-in">You must be logged in to post</p>
                     <% }%>
-                <button type="button" name="Enter the site" placeholder="Enter the site here"></button>
             </div>
         </div>
     </div>
 </section>
+<div class="hero-foot">
+  <nav class="tabs is-centered is-fullwidth">
+    <div class="container">
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/accounts/login/"><i id="reclor" class="fab fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://en-gb.facebook.com/"><i id="reclor" class="fab fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/?lang=en-gb"><i id="reclor"class="fab fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="https://www.pinterest.co.uk/"><i id="reclor"class="fab fa-pinterest" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a id="copyright">©2018 Pieces of History </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

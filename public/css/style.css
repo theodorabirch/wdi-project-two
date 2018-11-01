@@ -1,18 +1,78 @@
 body {
-  font-family: 'Dosis', sans-serif;
+    font-family: 'Cinzel', serif;
 }
 
+#home {
+  padding-bottom: 28rem;
+}
 
 header ul {
   display: flex;
   justify-content: space-around;
 }
-
-section.home-page {
-  background-image: url("https://i-h2.pinimg.com/564x/70/1e/53/701e53c8262a1df5814b7c5f262e1513.jpg");
-  background-repeat: no-repeat;
+.logged-in {
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+#copyright {
+  font-family: 'Cinzel', serif;
+}
+#navbarMenu {
+  font-family: 'Cinzel', serif;
+  color: grey;
+}
+.articles {
+  font-family: 'Cinzel', serif;
+}
+#home-title {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+#home-subtitle {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
 }
 
+}
+#about-title {
+  color: black;
+  font-family: 'Cinzel', serif;
+}
+
+}
+#about-subtitle {
+  color: black;
+  font-family: 'Cinzel', serif;
+}
+}
+#boat-image {
+  margin-top:-35px;
+  height: 70%;
+  width: 70%;
+  margin-left: 206px;
+}
+#pieces-of-history {
+  margin-top: -700px;
+  color: white;
+}
+#show-page-banner {
+  background-color: grey;
+}
+#reclor {
+font-weight: bold;
+color: grey;
+font-size: 20px;
+}
+.hero-foot {
+  background-color: white;
+  flex-shrink: 0;
+}
 header li {
   list-style: none;
 }
