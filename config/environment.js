@@ -1,7 +1,6 @@
-const dbUri = 'mongodb://localhost/Ahoy';
-const port = 4000;
 
-module.exports = {
-  dbUri: dbUri,
-  port: port
-};
+const port = process.env.PORT || 4000;
+const dbUri = process.env.MONGODB_URI ||
+'mongodb://localhost/Pieces-of-History';
+
+module.exports = { port, dbUri };

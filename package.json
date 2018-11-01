@@ -1,7 +1,7 @@
 {
   "name": "wdi-project-2",
   "version": "1.0.0",
-  "descrioption": "An Express CRUD App",
+  "description": "An Express CRUD App",
   "main": "app.js",
   "licence": "MIT",
   "scripts": {
