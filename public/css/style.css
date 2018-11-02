@@ -3,6 +3,9 @@ body {
     width: 100vw;
 }
 
+.show-title {
+  font-size: 50px;
+}
 #home {
   padding-bottom: 28rem;
 }
@@ -15,12 +18,21 @@ h2 {
 textarea #name.textarea {
   font-family: 'Cinzel', serif;
 }
-
+textarea {
+  font-family: 'Cinzel', serif;
+}
 p {
   font-family: 'Cinzel', serif;
-  color: black;
+  color: grey;
   font-size: 15px;
 }
+
+p #logged {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .comment-box {
   width: 100%;
 }
@@ -124,6 +136,7 @@ header li {
 
 h1 .title {
   font-color: white;
+  color: black;
 }
 .column {
   margin-top: 20px;
@@ -214,6 +227,9 @@ main {
 }
 .the-show-text {
   margin-bottom: 75px;
+}
+p {
+  font-weight: bold; s
 }
 .buttons:not(:last-child) {
   margin-top: -44px;
