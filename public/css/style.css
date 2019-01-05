@@ -27,11 +27,6 @@ p {
   font-size: 15px;
 }
 
-p #logged {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-}
 
 .comment-box {
   width: 100%;
